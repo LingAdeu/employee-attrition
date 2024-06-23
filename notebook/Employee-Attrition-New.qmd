@@ -24,6 +24,13 @@ The dataset consists of 1470 rows and 35 columns after data pre-processing (see 
 ## 2.1 Data import
 
 ```{r, message=F, warning=F}
+# list of dependencies
+packages <- c('tidyverse', 'scales', 'ggcorrplot', 'gghighlight', 'patchwork')
+
+# install if not exists
+if(!requireNamespace(packages)){
+       install.packages(packages)
+}
 # import libraries
 library(tidyverse)
 library(scales)
@@ -31,13 +38,14 @@ library(ggcorrplot)
 library(gghighlight)
 library(patchwork)
 
+# set inform off
 options(dplyr.summarise.inform=F)
 ```
 
 ```{r}
 # import dataset
 df <-
-  read_csv("HR-Employee-Attrition.csv", show_col_types = F)
+  read_csv("../data/HR-Employee-Attrition.csv", show_col_types = F)
 
 # check top-rows
 df[1:5,]
