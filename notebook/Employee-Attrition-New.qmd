@@ -19,7 +19,7 @@ Responding to the task, as a data analyst, I will need a metric to measure the r
 
 # 2 Data
 
-The dataset consists of 1470 rows and 35 columns after data pre-processing (see below). The pre-processing was done by firstly converting some variables into factors, a type of data objects representing categorical data such as `Yes` and `No` in the `Attrition` column. Next, I needed to convert the data values into  easier-to-understand labels. For example, `1` is `Low`, and `4` is `High` in the context of job satisfaction score. After doing these steps, I proceeded with checking missing data and duplicates. If NA values and duplicated data were found, some data removals would be required. But they were not found on the dataset so the removals were not done and a data analysis could be carried out.
+The dataset consists of 1470 rows and 35 columns after data pre-processing (see below). The pre-processing was done by firstly converting some variables into factors, a type of data objects representing categorical data such as `Yes` and `No` in the `Attrition` column. Next, I needed to convert the data values into easier-to-understand labels. For example, `1` is `Low`, and `4` is `High` in the context of job satisfaction score. After doing these steps, I proceeded with checking missing data and duplicates. If NA values and duplicated data were found, some data removals would be required. But they were not found on the dataset so the removals were not done and a data analysis could be carried out.
 
 ## 2.1 Data import
 
@@ -129,10 +129,9 @@ glimpse(df_new)
 
 Because the issue is employee attrition, metrics which will be used here is the staffing metric, particularly attrition rate which can be calculated with this following formula:
 
-$$
-\text{Annual attrition rate} = \frac{\text{n of leavers}}{\text{total n of employees}} \times 100\%
+\$\$ \text{Annual attrition rate} = \frac{\text{n of leavers}}{\text{total n of employees}} \times 100%
 
-$$ 
+\$\$
 
 -   **n of leavers**: number of people who leave the company at a period of time
 -   **total n of employees**: overall number of employees (stayers + leavers)
@@ -589,18 +588,14 @@ ggplot(df_new, aes(x=Age)) +
 
 -   Taken altogether, in comparison to the personal domain, variables under the professional domains tend to be more contributing to the attrition rate.
 
-
-
 ## 5.2 Recommendations for the Human Resource Manager
 
-- Handle the work activity and condition issues such as to reduce the amount of business travels, 
-improve career development because it is the junior level employees who tend to leave the company
-- Offering training and mentoring doesn't seem to be effective for the attrition issue in the company as there are no differences of excellent and outstanding performance rates. 
+-   Handle the work activity and condition issues such as to reduce the amount of business travels, improve career development because it is the junior level employees who tend to leave the company
+-   Offering training and mentoring doesn't seem to be effective for the attrition issue in the company as there are no differences of excellent and outstanding performance rates.
 
 ## 5.3 Directions for a further analysis
 
 I have not yet addressed the salary issues which can be another good indicator for the departure. As offering competitive salary can retain top talent, salary and benefit can further clarify if these factors play significant roles in the employee attrition. In addition to the competitive compensation, a further analysis can take exit interview data into account to get more confident answers for the employee turnover. This data inclusion cannot only verifies my current findings but also can go beyond *possibilities*.
-
 
 # Note
 
